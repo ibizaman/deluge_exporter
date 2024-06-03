@@ -210,7 +210,7 @@ def start_exporter():
     logger.info("Exporter listening on {}:{}", http_server_args.get('addr', ''), http_server_args['port'])
 
 
-if __name__ == "__main__":
+def main():
     log_level = os.environ.get("LOG_LEVEL", "ERROR")
     if log_level == "":
         log_level = "ERROR"
@@ -228,3 +228,6 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print()
         pass
+
+if __name__ == "__main__":
+    main()

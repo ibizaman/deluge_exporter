@@ -7,7 +7,7 @@ import libtorrent
 
 
 def main():
-    d = Path(__file__).parent
+    d = Path(__file__).parent.parent / "deluge_exported"
 
     metrics = dict(sorted([(x.name, x.type.name) for x in libtorrent.session_stats_metrics()]))
 
